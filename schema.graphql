@@ -1,0 +1,9 @@
+type Redeemed @entity(immutable: true) {
+  id: Bytes!
+  emitterChainId: Int! # uint16
+  emitterAddress: Bytes! # bytes32
+  sequence: BigInt! # uint64
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

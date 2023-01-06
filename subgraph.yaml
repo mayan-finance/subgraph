@@ -1,0 +1,23 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: MayanSwap
+    network: mainnet
+    source:
+      address: "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF"
+      abi: MayanSwap
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Redeemed
+      abis:
+        - name: MayanSwap
+          file: ./abis/MayanSwap.json
+      eventHandlers:
+        - event: Redeemed(indexed uint16,indexed bytes32,indexed uint64)
+          handler: handleRedeemed
+      file: ./src/mayan-swap.ts
