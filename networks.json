@@ -1,7 +1,42 @@
 {
   "mainnet": {
     "MayanSwap": {
-      "address": "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF"
+      "address": "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF",
+      "startBlock": 16206086
+    },
+    "CoreBridge": {
+      "address": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B",
+      "startBlock": 16206086
+    }
+  },
+  "bsc": {
+    "MayanSwap": {
+      "address": "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF",
+      "startBlock": 23989385
+    },
+    "CoreBridge": {
+      "address": "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B",
+      "startBlock": 23989385
+    }
+  },
+  "matic": {
+    "MayanSwap": {
+      "address": "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF",
+      "startBlock": 36949022
+    },
+    "CoreBridge": {
+      "address": "0x7A4B5a56256163F07b2C80A7cA55aBE66c4ec4d7",
+      "startBlock": 36949022
+    }
+  },
+  "avalanche": {
+    "MayanSwap": {
+      "address": "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF",
+      "startBlock": 23762169
+    },
+    "CoreBridge": {
+      "address": "0x54a8e5f9c4CbA08F9943965859F6c34eAF03E26c",
+      "startBlock": 23762169
     }
   }
 }

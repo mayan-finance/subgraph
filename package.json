@@ -7,8 +7,7 @@
     "deploy": "graph deploy --node https://api.thegraph.com/deploy/ mayan-finance/subgraph",
     "create-local": "graph create --node http://localhost:8020/ mayan-finance/subgraph",
     "remove-local": "graph remove --node http://localhost:8020/ mayan-finance/subgraph",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mayan-finance/subgraph",
-    "test": "graph test"
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 mayan-finance/subgraph"
   },
   "dependencies": {
     "@graphprotocol/graph-cli": "0.37.1",

@@ -6,8 +6,9 @@ dataSources:
     name: MayanSwap
     network: mainnet
     source:
-      address: "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF"
       abi: MayanSwap
+      address: "0x05B70Fb5477A93bE33822bfB31fDAF2c171970dF"
+      startBlock: 16206086
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -21,3 +22,23 @@ dataSources:
         - event: Redeemed(indexed uint16,indexed bytes32,indexed uint64)
           handler: handleRedeemed
       file: ./src/mayan-swap.ts
+  - kind: ethereum
+    name: CoreBridge
+    network: mainnet
+    source:
+      abi: CoreBridge
+      address: "0x98f3c9e6E3fAce36bAAd05FE09d375Ef1464288B"
+      startBlock: 16206086
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - LogMessagePublished
+      abis:
+        - name: CoreBridge
+          file: ./abis/CoreBridge.json
+      eventHandlers:
+        - event: LogMessagePublished(indexed address,uint64,uint32,bytes,uint8)
+          handler: handleLogMessagePublishedh
+      file: ./src/core-bridge.ts

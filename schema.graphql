@@ -7,3 +7,26 @@ type Redeemed @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+type Transfered @entity {
+  id: Bytes!
+  swapSequence: BigInt!
+  transferSequence: BigInt!
+  timestamp: BigInt!
+  transactionHash: Bytes!
+  blockNumber: BigInt!
+}
+
+type LogMessagePublished @entity(immutable: true) {
+  id: Bytes!
+  sender: Bytes! # address
+  sequence: BigInt! # uint64
+  nonce: BigInt! # uint32
+  payload: Bytes! # bytes
+  consistencyLevel: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+
